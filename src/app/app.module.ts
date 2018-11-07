@@ -10,11 +10,14 @@ import { FooterComponent } from './footer/footer.component'
 import { DataService } from './data.service';
 import { ProductsComponentComponent } from './products-component/products-component.component'
 
+import { SafePipe } from './pipes/safeHtml'
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ProductsComponentComponent
+    ProductsComponentComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

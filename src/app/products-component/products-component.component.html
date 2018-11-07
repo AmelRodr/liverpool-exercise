@@ -1,6 +1,20 @@
-find<input type="text" [(ngModel)]='filter' >
-<button (click)="search()" > Search</button>
-<p>Descripton: {{data.contents[0].mainContent[3].contents[0].records[0].productDisplayName[0]}} </p> 
-<p> {{data.ruleLimit}} </p>
-<p> {{data.name}} </p>
-<p> {{data.contents}} </p>
+
+
+<input class="w-50" type="text" placeholder="Search" aria-label="Search" [(ngModel)]='filter'>
+<button (click)="search()"> Search</button>
+
+
+<div class="container mt-5">
+  <div class="card-deck">
+    <div *ngFor="let dat of data">
+      <div class="card mt-5" style="width: 18rem;">
+        <img class="card-img-top" [src]="dat.largeImage[0] | safe:'url'" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{dat?.productDisplayName[0]}}</h5>
+          <a href="#" class="btn btn-primary">${{dat?.promoPrice}}</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
