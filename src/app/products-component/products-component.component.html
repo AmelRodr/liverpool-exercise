@@ -1,7 +1,12 @@
 
-
-<input class="w-50" type="text" placeholder="Search" aria-label="Search" [(ngModel)]='filter'>
-<button (click)="search()"> Search</button>
+<nav class="navbar">
+    <a class="navbar-brand" href="#">
+        <img src="//assets.liverpool.com.mx/assets/web/logos/liverpool_logo.gif" alt="Liverpool - es parte de mi vida" title="Liverpool - es parte de mi vida">
+        <input class="w-75 " type="text" placeholder="Search" aria-label="Search" [(ngModel)]='filter'>
+        <button (click)="search()"> Search</button>
+        
+    </a>
+  </nav>
 
 
 <div class="container mt-5">
@@ -11,10 +16,12 @@
         <img class="card-img-top" [src]="dat.largeImage[0] | safe:'url'" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{dat?.productDisplayName[0]}}</h5>
-          <a href="#" class="btn btn-primary">${{dat?.promoPrice}}</a>
+          <a href="#" class="btn btn-primary">${{dat?.listPrice}}</a>
         </div>
       </div>
 
     </div>
   </div>
 </div>
+
+
